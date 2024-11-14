@@ -15,7 +15,7 @@ st.markdown("""
             font-family: 'Arial', sans-serif;
         }
         .stButton>button {
-            background-color: #ff4b4b;
+            background-color: #ff0000;
             color: white;
             border-radius: 8px;
             padding: 10px 20px;
@@ -24,7 +24,7 @@ st.markdown("""
             transition: 0.3s;
         }
         .stButton>button:hover {
-            background-color: #ff0000;
+            background-color: #ff4b4b;
         }
         .recommendation-title {
             font-size: 1.5rem;
