@@ -1,5 +1,6 @@
 import pickle
 import numpy as np
+import streamlit as st
 import requests
 
 access_key = st.secrets["TMDB_KEY"]

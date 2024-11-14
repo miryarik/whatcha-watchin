@@ -1,6 +1,5 @@
 import streamlit as st
 import pickle
-import requests
 from utils import pickle_load, fetch_poster_path
 
 similarity = pickle_load(5)
