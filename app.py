@@ -4,22 +4,17 @@ from pathlib import Path
 import shutil
 from utils import pickle_load, fetch_poster_path
 
-# Get the home directory for the current user
-user_home = Path.home()
+STREAMLIT_STATIC_PATH = Path(st.__path__[0]) / 'static'
+CSS_PATH = (STREAMLIT_STATIC_PATH / "assets/css")
 
-# Define a custom folder for static files inside the home directory
-css_path = user_home / "custom_assets/css"
+if not CSS_PATH.is_dir():
+    CSS_PATH.mkdir(parents=True, exist_ok=True)
 
-if not css_path.exists():
-    css_path.mkdir(parents=True, exist_ok=True)
-
-# Copy your CSS file to this custom directory
-css_file = css_path / "custom_style.css"
+css_file = CSS_PATH / "custom_style.css"
 if not css_file.exists():
     shutil.copy("assets/css/custom_style.css", css_file)
 
-# Use relative path link in Streamlit
-st.markdown(f'<link rel="stylesheet" href="{css_file}" type="text/css"/>', unsafe_allow_html=True)
+st.markdown('<link rel="stylesheet" href="assets/css/custom_style.css" type="text/css"/>', unsafe_allow_html=True)
 
 similarity = pickle_load(5)
 
