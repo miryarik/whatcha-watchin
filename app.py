@@ -1,25 +1,53 @@
 import streamlit as st
-from pathlib import Path
-import shutil
 import pickle
 from utils import pickle_load, fetch_poster_path
-
-STREAMLIT_STATIC_PATH = Path(st.__path__[0]) / 'static'
-CSS_PATH = (STREAMLIT_STATIC_PATH / "assests/css")
-
-if not CSS_PATH.is_dir():
-    CSS_PATH.mkdir(parents=True, exist_ok=True)
-
-css_file = CSS_PATH / "custom_styles.css"
-if not css_file.exists():
-    shutil.copy("assets/css/custom_styles.css", css_file)
-
-st.markdown('<link rel="stylesheet" href="assets/css/custom_style.css" type="text/css"/>', unsafe_allow_html=True)
 
 similarity = pickle_load(5)
 movies = pickle.load(open('./archive/movies_voted.pkl', 'rb'))
 
 st.set_page_config(layout="wide", page_title="Whatcha Watchin", page_icon="🎥")
+
+# some styling
+st.markdown("""
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+        }
+        .stButton>button {
+            background-color: #ff4b4b;
+            color: white;
+            border-radius: 8px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .stButton>button:hover {
+            background-color: #ff0000;
+        }
+        .recommendation-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .rating {
+            font-size: 1rem;
+            color: #666;
+        }
+        .poster {
+            max-width: 100%;
+            border-radius: 12px;
+            margin-top: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .container {
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
+""", unsafe_allow_html=True)
 
 st.title('🎥 Whatcha Watchin? 🎥')
 st.subheader("Discover movie recommendations tailored to your taste!")
