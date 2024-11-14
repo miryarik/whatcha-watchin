@@ -72,7 +72,7 @@ def recommend(movie):
 
 input_movies = st.multiselect("🎬 Select up to 5 movies you like", movies['title'].values, max_selections=5)
 
-if st.button('🎥 Suggest Recommendations 🎥'):
+if st.button('🎥 Get Suggestions 🎥'):
     combined_results = {}
 
     for movie in input_movies:
