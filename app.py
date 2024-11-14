@@ -21,48 +21,6 @@ movies = pickle.load(open('./archive/movies_voted.pkl', 'rb'))
 
 st.set_page_config(layout="wide", page_title="Whatcha Watchin", page_icon="🎥")
 
-# some styling
-# st.markdown("""
-#     <style>
-#         body {
-#             background-color: #f4f4f4;
-#             font-family: 'Arial', sans-serif;
-#         }
-#         .stButton>button {
-#             background-color: #ff4b4b;
-#             color: white;
-#             border-radius: 8px;
-#             padding: 10px 20px;
-#             border: none;
-#             cursor: pointer;
-#             transition: 0.3s;
-#         }
-#         .stButton>button:hover {
-#             background-color: #ff0000;
-#         }
-#         .recommendation-title {
-#             font-size: 1.5rem;
-#             font-weight: 600;
-#             margin-bottom: 5px;
-#             color: #333;
-#         }
-#         .rating {
-#             font-size: 1rem;
-#             color: #666;
-#         }
-#         .poster {
-#             max-width: 100%;
-#             border-radius: 12px;
-#             margin-top: 10px;
-#             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-#         }
-#         .container {
-#             padding: 10px;
-#             margin: 5px;
-#         }
-#     </style>
-# """, unsafe_allow_html=True)
-
 st.title('🎥 Whatcha Watchin? 🎥')
 st.subheader("Discover movie recommendations tailored to your taste!")
 
