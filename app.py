@@ -5,8 +5,7 @@ from utils import pickle_load, fetch_poster_path
 similarity = pickle_load(5)
 movies = pickle.load(open('./archive/movies_voted.pkl', 'rb'))
 
-st.set_page_config(layout= "wide")
-st.set_page_config(page_title= "Whatcha Watchin")
+st.set_page_config(layout= "wide", page_title= "Whatcha Watchin", page_icon="🎥")
 
 st.title('Whatcha Watchin?')
 
