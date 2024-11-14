@@ -6,7 +6,7 @@ similarity = pickle_load(5)
 movies = pickle.load(open('./archive/movies_voted.pkl', 'rb'))
 
 st.set_page_config(layout= "wide")
-st.set_page_config(page_title="Whatcha Watchin", page_icon="🎥")
+st.set_page_config(page_title= "Whatcha Watchin")
 
 st.title('Whatcha Watchin?')
 
