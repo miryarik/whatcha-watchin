@@ -5,6 +5,7 @@ import requests
 
 access_key = st.secrets["TMDB_KEY"]
 
+
 def pickle_split(array, num_parts):
     # calculate the size of each part
     part_size = len(array) // num_parts
