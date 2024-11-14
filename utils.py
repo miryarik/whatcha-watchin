@@ -2,6 +2,8 @@ import pickle
 import numpy as np
 import requests
 
+access_key = st.secrets["TMDB_KEY"]
+
 def pickle_split(array, num_parts):
     # calculate the size of each part
     part_size = len(array) // num_parts
@@ -40,7 +42,7 @@ def fetch_poster_path(movie_id):
     tmdb_url = f"https://api.themoviedb.org/3/movie/{movie_id}?language=en-US"
     headers = {
         "accept": "application/json",
-        "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0NDgyNDVlYjUwN2JiZTU4NDgyNWNkY2E1MTJmN2M3ZSIsIm5iZiI6MTczMTUyMDY4My43NjI2MjQ1LCJzdWIiOiI2NzExMWRkMWRiNzljOWNlYWUwZjBkNmUiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.oFrIXcLJLkSCKnzoZ1yWv2Q8XdvDTbUdf49WyA4ORJc"
+        "Authorization": f"Bearer {access_key}"
     }
 
     response = requests.get(tmdb_url, headers= headers)
