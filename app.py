@@ -4,15 +4,15 @@ import shutil
 import pickle
 from utils import pickle_load, fetch_poster_path
 
-STREAMLIT_STATIC_PATH = Path(st.__path__[0]) / 'static'
-CSS_PATH = (STREAMLIT_STATIC_PATH / "assests/css")
+# STREAMLIT_STATIC_PATH = Path(st.__path__[0]) / 'static'
+# CSS_PATH = (STREAMLIT_STATIC_PATH / "assests/css")
 
-if not CSS_PATH.is_dir():
-    CSS_PATH.mkdir(parents=True, exist_ok=True)
+# if not CSS_PATH.is_dir():
+#     CSS_PATH.mkdir(parents=True, exist_ok=True)
 
-css_file = CSS_PATH / "custom_styles.css"
-if not css_file.exists():
-    shutil.copy("assets/css/custom_styles.css", css_file)
+# css_file = CSS_PATH / "custom_styles.css"
+# if not css_file.exists():
+#     shutil.copy("assets/css/custom_styles.css", css_file)
 
 st.markdown('<link rel="stylesheet" href="assets/css/custom_style.css" type="text/css"/>', unsafe_allow_html=True)
 
