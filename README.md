@@ -1,5 +1,6 @@
 
 # Whatcha-Watchin 🎥
+- https://whatcha-watchin.streamlit.app/
 
 A Streamlit-based movie recommendation app that suggests highly rated movies tailored to your taste!
 
@@ -14,8 +15,12 @@ A Streamlit-based movie recommendation app that suggests highly rated movies tai
 2. **Click the button**
    - Click the "Get Suggestions" button.
 
+     ![step-2](./assets/images/step-2.png)
+
 3. **That's it!**
    - The top 10 highest-rated recommendations based on your input are display with ratings and posters.
+
+     ![step-3](./assets/images/step-3.png)
 
 ## Available online at
 - https://whatcha-watchin.streamlit.app/
