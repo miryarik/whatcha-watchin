@@ -29,6 +29,7 @@ A Streamlit-based movie recommendation app that suggests highly rated movies tai
 2. **Install dependencies**:
    - Make sure you have Python installed (>= 3.7).
    - Install required packages:
+     
      ```bash
      pip install -r requirements.txt
      ```
