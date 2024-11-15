@@ -8,6 +8,8 @@ A Streamlit-based movie recommendation app that suggests highly rated movies tai
 1. **Input some movies you like**
    - Users can input up to 5 movies they enjoy.
    - Suggestions are made based on this input.
+     
+     ![step-1](./assets/images/step-1.png)
 
 2. **Click the button**
    - Click the "Get Suggestions" button.
